@@ -5,19 +5,17 @@
 function mergeSelectedTabs() {
     var selected_tabIds = [];
     $('input[type="checkbox"]:checked').each(function () {
-        selected_tabIds.push(parseInt($(this).val()));
+        if ($(this).attr('name').localeCompare("window") !=0) {
+            selected_tabIds.push(parseInt($(this).val()));
+        }
     });
     if (selected_tabIds.length > 1) {
         chrome.windows.create({tabId: selected_tabIds[0]}, function (window) {
-            chrome.tabs.move(selected_tabIds.slice(1), { windowId: window.id, index: -1 }, function (selected_tabIds) {
-                // console.log(selected_tabIds);
-            });
+            chrome.tabs.move(selected_tabIds.slice(1), { windowId: window.id, index: -1 }, function (selected_tabIds) {});
         });
     }
     else if (selected_tabIds.length == 1) {
-        chrome.windows.create({ tabId: selected_tabIds[0] }, function (window) {
-            //console.log(selected_tabIds); 
-        });
+        chrome.windows.create({ tabId: selected_tabIds[0] }, function (window) {});
     }
 }
 
