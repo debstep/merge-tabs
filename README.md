@@ -12,3 +12,6 @@ Check "Select all tabs in window ...", click "select windows" to select all tabs
 Clear windows clears all selected windows and tabs contained within the window. 
 Hopefully everything else is self explanatory.
 
+##Comments
+Had some issues with OSX, or it might just be my macbook. 
+Have to have developer mode on all the time (ignore the warnings, always). 
