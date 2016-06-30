@@ -13,5 +13,4 @@ Clear windows clears all selected windows and tabs contained within the window.
 Hopefully everything else is self explanatory.
 
 ##Comments
-Had some issues with OSX, or it might just be my macbook. 
-Have to have developer mode on all the time (ignore the warnings, always). 
+I had some issues with OSX, or it might just be my macbook. You need to have developer mode on whenever merge-tabs in use(ignore the warnings, always). 
